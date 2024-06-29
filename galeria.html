@@ -160,7 +160,7 @@
   <div id="portfolio">
     <div class="container">
       <div class="row">
-        <div class="col-12 ">
+        <div class="col-12">
           <h2>Galería de nuestros productos</h2>
           <p>
             Todos nuestros productos vienen seleccionados, sanitizados y con
@@ -454,7 +454,6 @@
 
   <!-- galeria gav -->
   <!-- Modal -->
-  <!-- Modal -->
   <div class="modal" id="myModal">
     <span class="close" id="closeModal">&times;</span>
     <span class="prev" id="prev">&lsaquo;</span>
@@ -473,6 +472,8 @@
       var next = document.getElementById('next');
       var currentIndex;
       var currentGallery;
+      var touchStartX = 0;
+      var touchEndX = 0;
 
       function openModal(gallery, index) {
         currentGallery = gallery;
@@ -499,6 +500,15 @@
       function showPrev() {
         currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
         modalImage.src = currentGallery[currentIndex].dataset.full;
+      }
+
+      function handleGesture() {
+        if (touchEndX < touchStartX) {
+          showNext();
+        }
+        if (touchEndX > touchStartX) {
+          showPrev();
+        }
       }
 
       document.querySelectorAll('.gallery').forEach(function (gallery) {
@@ -532,6 +542,18 @@
             closeModalFunc();
           }
         }
+      });
+
+      modal.addEventListener('touchstart', function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      });
+
+      modal.addEventListener('touchmove', function (event) {
+        touchEndX = event.changedTouches[0].screenX;
+      });
+
+      modal.addEventListener('touchend', function (event) {
+        handleGesture();
       });
     });
   </script>
