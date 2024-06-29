@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Grupo Alimenticio Vida</title>
+  <meta name="keywords" content="Alimentos" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <meta name="description"
+    content="Grupo Alimenticio Vida - Somos proveedores de varias ramas de alimentación como fruterías, verdulerías, restaurantes, hoteles, comedores, gubernamentales, catering, despensas, box lunch y nuestra nueva rama domicilio." />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- stylesheet css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/nivo-lightbox.css" />
+  <link rel="stylesheet" href="css/nivo_themes/default/default.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  <!-- google web font css -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+
+  <!-- style -->
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 2em;
+    }
+
+    .gallery-item {
+      flex: 1 1 calc(25% - 10px);
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      max-height: 100%;
+      height: 100%;
+      /* Ocupa el alto total del dispositivo */
+      object-fit: contain;
+    }
+
+    .close,
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .close {
+      top: 20px;
+      right: 20px;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-item {
+        flex: 1 1 calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-item {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <!-- fin style -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <a href="index.html" class="navbar-brand"><img class="logo-gav" src="images/logo.png" style="max-height: 60px"
+            class="img-responsive" alt="logo" /><img class="logo-gav2" src="images/logo1-1.png" style="max-height: 60px"
+            class="img-responsive" alt="logo" /></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html" class="active">INICIO</a></li>
+          <li><a href="acerca.html">ACERCA DE NOSOTROS</a></li>
+          <li><a href="galeria.html">GALERÍA</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- portfolio header section -->
+  <div id="portfolio-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>Galería de fotos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- portfolio section -->
+  <div id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 ">
+          <h2>Galería de nuestros productos</h2>
+          <p>
+            Todos nuestros productos vienen seleccionados, sanitizados y con
+            fecha de caducidad porque en la empresa Grupo Alimenticio Vida
+            (GAV) eres tú primero.
+          </p>
+          <div class="gallery" id="gallery1">
+            <div class="gallery-item">
+              <img src="images/Frame76.jpg" data-full="images/001.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame77.jpg" data-full="images/002.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame78.jpg" data-full="images/003.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame79.jpg" data-full="images/004.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame80.jpg" data-full="images/005.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame81.jpg" data-full="images/006.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame82.jpg" data-full="images/IMG-20200825-WA0090.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame83.jpg" data-full="images/IMG-20200825-WA0092.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame86.jpg" data-full="images/Frame3.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame87.jpg" data-full="images/Frame2.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame88.jpg" data-full="images/Frame1.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame89.jpg" data-full="images/IMG-20200825-WA0097.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame91.jpg" data-full="images/IMG-20200825-WA0094.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame90.jpg" data-full="images/IMG-20200825-WA0096.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame72.jpg" data-full="images/portfolio-img17.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame73.jpg" data-full="images/portfolio-img16.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame74.jpg" data-full="images/portfolio-img15.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame75.jpg" data-full="images/portfolio-img14.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame92.jpg" data-full="images/img1.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame93.jpg" data-full="images/portfolio-img5.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame94.jpg" data-full="images/portfolio-img6.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame95.jpg" data-full="images/img2.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame96.jpg" data-full="images/portfolio-img4.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame97.jpg" data-full="images/portfolio-img7.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame98.jpg" data-full="images/img3.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame99.jpg" data-full="images/portfolio-img3.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame100.jpg" data-full="images/portfolio-img8.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame101.jpg" data-full="images/img4.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame102.jpg" data-full="images/portfolio-img2.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame103.jpg" data-full="images/portfolio-img9.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame104.jpg" data-full="images/img5.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame105.jpg" data-full="images/portfolio-img1.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame106.jpg" data-full="images/portfolio-img10.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame107.jpg" data-full="images/img6.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame108.jpg" data-full="images/img11.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame109.jpg" data-full="images/portfolio-img11.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame110.jpg" data-full="images/img7.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame111.jpg" data-full="images/img10.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame112.jpg" data-full="images/portfolio-img12.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame113.jpg" data-full="images/img8.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame114.jpg" data-full="images/img9.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame115.jpg" data-full="images/portfolio-img13.jpg" alt="Imagen 8">
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 5em;">
+          <hr>
+        </div>
+
+
+        <div class="col-12 ">
+          <h2>Galería de nuestro trabajo</h2>
+          <!-- <p>Todos nuestros productos vienen seleccionados, sanitizados y con fecha de caducidad porque en la empresa
+            Grupo Alimenticio Vida (GAV) eres tú primero.
+          </p> -->
+
+          <div class="gallery" id="gallery2">
+            <div class="gallery-item">
+              <img src="images/Frame68.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_14.jpg" alt="Imagen 5">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame69.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_13.jpg" alt="Imagen 6">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame70.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_12.jpg" alt="Imagen 7">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame71.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_10.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame84.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_9.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame85.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_8.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame118.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_6.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame116.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_5.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame119.jpg" data-full="images/Image-2022-03-04-3.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame122.jpg" data-full="images/IMG-20200825-WA0089.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame124.jpg" data-full="images/IMG-20200825-WA0095.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame125.jpg" data-full="images/PHOTO-2024-06-28-16-01-17.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame120.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_1.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame123.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_2.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame126.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_3.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame121.jpg" data-full="images/PHOTO-2024-06-28-16-01-17_4.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame127.jpg" data-full="images/Image-2022-03-04-2.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame130.jpg" data-full="images/Image-2022-03-04-1.jpg" alt="Imagen 8">
+            </div>
+            <div class="gallery-item">
+              <img src="images/Frame132.jpg" data-full="images/Frame135.jpg" alt="Imagen 8">
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- footer section -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <!-- <img src="page/images/logo.png" class="img-responsive" alt="logo"> -->
+          <h3 class="text-center">GAV</h3>
+          <p class="text-center">
+            Distribuidor y proveedor de frutas y verduras legumbres a
+            domicilio.
+            <!-- <a rel="nofollow" href="#" target="_parent">templatemo</a> -->
+          </p>
+          <p class="text-center">
+            <i class="fa fa-phone"></i><a href="tel:9994739605">9994739605</a>
+          </p>
+          <p class="text-center">
+            <i class="fa fa-whatsapp"></i><a href="https://wa.me/5219995506113" target="_blank">9995506113</a>
+          </p>
+          <p class="text-center">
+            <i class="fa fa-envelope-o"></i><a
+              href="mailto:gavpedidosmerida@hotmail.com">gavpedidosmerida@hotmail.com</a>
+          </p>
+          <p class="text-center">
+            <i class="fa fa-globe"></i>
+            <a href="https://www.gavproveedoresfrutasyverduras.com/">https://www.gavproveedoresfrutasyverduras.com/</a>
+          </p>
+        </div>
+
+        <!-- <div class="col-md-3 col-sm-4">
+				<h3>Useful Links</h3>
+				<p><a href="#">HTML5 Templates</a></p>
+				<p><a href="#">CSS3 Tricks</a></p>
+				<p><a href="#">Design Blog</a></p>
+				<p><a href="#">Animations</a></p>
+			</div> -->
+
+        <!-- <div class="col-md-6 col-sm-4 newsletter">
+				<h3>CONTACTANOS</h3>
+				<p>Envianos un correo.</p>
+				<div class="input-group">
+           	    	<form action="#" method="post">
+                        <input name="email" type="email" placeholder="Enter your email" class="form-control" autorequired>
+                    	<button type="submit" name="submit" class="btn email">Enviar</button>
+                  	</form>
+				 </div>
+			</div> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- copyright section -->
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <p class="text-center">Copyright © 2021 Grupo Alimenticio Vida</p>
+        </div>
+        <div class="col-md-12 col-sm-12 text-center">
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.facebook.com/GAVMERIDA" class="fa fa-facebook" target="blank"></a>
+            </li>
+            <!-- <li><a href="#" class="fa fa-twitter"></a></li> -->
+            <li>
+              <a href="https://www.instagram.com/g.a.v.merida/?hl=es-la" class="fa fa-instagram" target="blank"></a>
+            </li>
+            <li><a href="#" class="fa fa-whatsapp"></a></li>
+            <!-- <li><a href="#" class="fa fa-behance"></a></li> -->
+            <li>
+              <a href="mailto:gavpedidosmerida@hotmail.com" class="fa fa-envelope-o" target="blank"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- galeria gav -->
+  <!-- Modal -->
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <span class="close" id="closeModal">&times;</span>
+    <span class="prev" id="prev">&lsaquo;</span>
+    <span class="next" id="next">&rsaquo;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Imagen en tamaño completo">
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var modal = document.getElementById('myModal');
+      var modalImage = document.getElementById('modalImage');
+      var closeModal = document.getElementById('closeModal');
+      var prev = document.getElementById('prev');
+      var next = document.getElementById('next');
+      var currentIndex;
+      var currentGallery;
+
+      function openModal(gallery, index) {
+        currentGallery = gallery;
+        currentIndex = index;
+        modal.style.display = 'flex';
+        modalImage.src = currentGallery[currentIndex].dataset.full;
+        setTimeout(function () {
+          modal.style.opacity = '1';
+        }, 10); // Small delay to trigger the transition
+      }
+
+      function closeModalFunc() {
+        modal.style.opacity = '0';
+        setTimeout(function () {
+          modal.style.display = 'none';
+        }, 500); // Match the transition duration
+      }
+
+      function showNext() {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        modalImage.src = currentGallery[currentIndex].dataset.full;
+      }
+
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        modalImage.src = currentGallery[currentIndex].dataset.full;
+      }
+
+      document.querySelectorAll('.gallery').forEach(function (gallery) {
+        var galleryItems = gallery.querySelectorAll('.gallery-item img');
+        galleryItems.forEach(function (item, index) {
+          item.addEventListener('click', function () {
+            openModal(galleryItems, index);
+          });
+        });
+      });
+
+      closeModal.addEventListener('click', closeModalFunc);
+
+      next.addEventListener('click', showNext);
+
+      prev.addEventListener('click', showPrev);
+
+      window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+          closeModalFunc();
+        }
+      });
+
+      window.addEventListener('keydown', function (event) {
+        if (modal.style.display === 'flex') {
+          if (event.key === 'ArrowRight') {
+            showNext();
+          } else if (event.key === 'ArrowLeft') {
+            showPrev();
+          } else if (event.key === 'Escape') {
+            closeModalFunc();
+          }
+        }
+      });
+    });
+  </script>
+  <!-- fin -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="js/nivo-lightbox.min.js"></script> -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
