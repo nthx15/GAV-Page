@@ -72,6 +72,8 @@
       height: 100%;
       /* Ocupa el alto total del dispositivo */
       object-fit: contain;
+      opacity: 0;
+      transition: opacity 0.5s;
     }
 
     .close,
@@ -479,9 +481,11 @@
         currentGallery = gallery;
         currentIndex = index;
         modal.style.display = 'flex';
+        modalImage.style.opacity = '0'; // Hide the image initially
         modalImage.src = currentGallery[currentIndex].dataset.full;
         setTimeout(function () {
           modal.style.opacity = '1';
+          modalImage.style.opacity = '1'; // Fade in the image
         }, 10); // Small delay to trigger the transition
       }
 
@@ -493,13 +497,21 @@
       }
 
       function showNext() {
-        currentIndex = (currentIndex + 1) % currentGallery.length;
-        modalImage.src = currentGallery[currentIndex].dataset.full;
+        modalImage.style.opacity = '0'; // Fade out the image
+        setTimeout(function () {
+          currentIndex = (currentIndex + 1) % currentGallery.length;
+          modalImage.src = currentGallery[currentIndex].dataset.full;
+          modalImage.style.opacity = '1'; // Fade in the image
+        }, 500); // Match the transition duration
       }
 
       function showPrev() {
-        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-        modalImage.src = currentGallery[currentIndex].dataset.full;
+        modalImage.style.opacity = '0'; // Fade out the image
+        setTimeout(function () {
+          currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+          modalImage.src = currentGallery[currentIndex].dataset.full;
+          modalImage.style.opacity = '1'; // Fade in the image
+        }, 500); // Match the transition duration
       }
 
       function handleGesture() {
@@ -557,6 +569,7 @@
       });
     });
   </script>
+
   <!-- fin -->
 
   <script src="js/jquery.js"></script>
